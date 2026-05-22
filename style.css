@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #090414;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.background-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(149, 0, 255, 0.35), transparent 70%);
+  animation: glowMove 8s infinite alternate ease-in-out;
+}
+
+@keyframes glowMove {
+  0% {
+    transform: translate(-100px, -100px) scale(1);
+  }
+
+  100% {
+    transform: translate(100px, 100px) scale(1.2);
+  }
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.card {
+  width: 100%;
+  max-width: 430px;
+  background: rgba(18, 10, 35, 0.9);
+  border: 1px solid rgba(183, 0, 255, 0.25);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 35px 28px;
+  box-shadow: 0 0 30px rgba(162, 0, 255, 0.35);
+  text-align: center;
+  animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 18px;
+  filter: drop-shadow(0 0 12px rgba(191, 0, 255, 0.8));
+}
+
+h1 {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #b8a8d9;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: block;
+  color: #e3d8ff;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(183, 0, 255, 0.2);
+  border-radius: 14px;
+  padding: 14px;
+  color: white;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #b700ff;
+  box-shadow: 0 0 12px rgba(183, 0, 255, 0.4);
+}
+
+.input-group textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #7a00ff, #d000ff);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 8px;
+}
+
+button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 18px rgba(191, 0, 255, 0.5);
+}
+
+#statusMessage {
+  margin-top: 18px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+@media (max-width: 500px) {
+  .card {
+    padding: 28px 22px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+}

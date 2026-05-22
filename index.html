@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bug Report</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background-glow"></div>
+
+  <div class="container">
+    <div class="card">
+      <img src="assets/logo.png" alt="Logo" class="logo" />
+
+      <h1>Bug Report</h1>
+      <p class="subtitle">
+        Laporkan bug atau masalah yang kamu temukan.
+      </p>
+
+      <form id="bugForm">
+        <div class="input-group">
+          <label>Nama Pelapor</label>
+          <input
+            type="text"
+            id="reporterName"
+            placeholder="Masukkan nama kamu"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label>Laporan Bug</label>
+          <textarea
+            id="bugDescription"
+            placeholder="Jelaskan bug yang ditemukan..."
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit">Kirim Laporan</button>
+      </form>
+
+      <p id="statusMessage"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
